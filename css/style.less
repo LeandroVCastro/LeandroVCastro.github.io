@@ -1,0 +1,278 @@
+@import "mixins.less";
+
+
+// Cores
+@cinza: #28272c;
+@cinza-medio: #dcdcdc;
+@cinza-claro: #f0f0f0;
+@azul: #19394e;
+@azul-piscina: #0e6fff;
+@azul-facebook: #3b5998;
+@preto: #000;
+@vermelho: #fd2f2f;
+
+#menuPrincipal{
+	background-color: @cinza;
+	margin: 0px;
+	padding-left: 0px;
+	a{
+		color: @cinza-claro;
+	}
+	.brand-logo{
+		img{
+			width: 140px;
+		}
+	}
+}
+
+
+
+@media screen and(max-width: 993px){
+	#menuPrincipal{
+		li{
+			a{
+				color: @cinza;
+			}
+		}
+
+		.brand-logo{
+			img{
+				width: 120px;
+			}
+		}
+	}
+}
+
+#inicio{
+	padding-top: 60px;
+	padding-bottom: 60px;
+	border-bottom: @vermelho solid 10px;
+	background-color: rgba(25, 57, 78, 0.81);
+	width: 100%;
+	.shadow-bottom(#000);
+	.parallax{
+		height: 300px;
+		img{
+		}
+	}
+	.destaque{
+		h1{
+			color: @vermelho;
+			text-align: center;
+			font-weight: 600;
+			text-shadow: 2px 2px @preto;
+			text-transform: uppercase;
+		}
+		.flipContainer{
+			margin-top: 50px;
+			h2{
+				color: @cinza-claro;
+				text-align: center;
+				font-weight: 600;
+				text-shadow: 2px 2px @preto;
+				text-transform: uppercase;
+			}
+			h3{
+				color: @preto;
+				text-align: center;
+				padding: 5px 50px;
+				background-color: @cinza-claro;
+				.rounded(3px);
+			}
+		}
+	}
+	.contato{
+		display: table;
+	}
+}
+
+
+@media screen and(max-width: 993px){
+	#inicio{
+		h1{
+			font-size: 3.2rem;
+		}
+		h2{
+			font-size: 1.5em;
+		}
+		h3{
+			font-size: 1.17em;
+		}
+	}
+}
+
+#social{
+	background-color: @cinza-claro;
+	padding: 1px;
+	h3.titulo{
+		text-align: center;
+		color: @azul;
+		text-shadow: 1px 2px @preto;
+		text-transform: uppercase;
+		font-weight: 600;
+		margin-bottom: 5px;
+	}
+	.redes{
+		margin-left: auto;
+		margin-right: auto;
+		display: table;
+		padding: 0px 15px;
+		a{
+			color: @cinza;
+			.transition(0.2s);
+			i{
+				.transition(0.2s);
+				margin: 0px 15px;
+				font-size: 30px;
+			}
+			.facebook:hover{
+				color: @azul-facebook;
+				.transition(0.2s);
+			}
+			.email:hover{
+				color: #deba01;
+				.transition(0.2s);
+			}
+			.telefone:hover{
+				color: #2bca1f;
+				.transition(0.2s);
+			}
+		}
+	}
+}
+
+#sobre{
+	border-top: @vermelho solid 10px;
+	.shadow-bottom(#000);
+	width: 100%;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	background-color: @cinza-medio;
+	h3.titulo{
+		color: @azul;
+		text-shadow: 1px 2px @preto;
+		text-transform: uppercase;
+		font-weight: 600;
+		margin-bottom: 5px;
+	}
+	p.texto{
+		color: @cinza;
+    text-align: justify;
+    font-size: 18px;
+	}
+}
+
+#portfolio{
+	padding-top: 60px;
+	padding-bottom: 60px;
+	width: 100%;
+	h3.titulo{
+		text-align: center;
+		color: @azul;
+		text-shadow: 1px 2px @preto;
+		text-transform: uppercase;
+		font-weight: 600;
+		margin-bottom: 0px;
+	}
+	.port-box{
+		padding: 25px;
+		img{
+			-webkit-filter: grayscale(100%);
+			filter: grayscale(100%);
+			.transition(0.2s);
+			&:hover{
+				-webkit-filter: none;
+				filter: none;
+				.transition(0.2s);
+			}
+		}
+	}
+}
+
+#contato{
+	padding-top: 60px;
+	padding-bottom: 60px;
+	width: 100%;
+	background-color: @cinza-medio;
+	.shadow-bottom(#000);
+	h3.titulo{
+		text-align: center;
+		color: @azul;
+		text-shadow: 1px 2px @preto;
+		text-transform: uppercase;
+		font-weight: 600;
+		margin-bottom: 0px;
+	}
+	h5{
+		margin-top: 0px;
+		text-align: center;
+		color: @azul;
+	}
+	.enviar{
+		background-color: @azul-piscina;
+	}
+	h5.titulo{
+		color: @azul;
+		text-align: center;
+		margin-bottom: 25px;
+	}
+	#carregando{
+		margin: 20px 0px;
+		display: none;
+		.preloader-wrapper{
+			margin-left: auto;
+			margin-right: auto;
+			display: table;
+		}
+	}
+
+	.dados{
+		display: table;
+		margin: 0px auto;
+		i{
+			font-size: 28px;
+			color: @azul;
+			margin-right: 15px;
+			margin-left: 15px;
+			margin-bottom: 15px;
+			&:hover{
+				cursor: pointer;
+			}
+			span{
+				color: #000;
+		    font-size: 16px;
+		    font-family: 'Lato', sans-serif;
+		    margin-left: 10px;
+		    position: relative;
+		    bottom: 4px;
+			}
+		}
+
+	}
+}
+
+.footer{
+	margin: 0px !important;
+	background-color: @azul !important;
+}
+
+.contact{
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background-color: rgba(14, 111, 255, 0.78) !important;
+
+}
+
+.home{
+	position: fixed;
+	bottom: 20px;
+	left: 20px;
+	background-color: @vermelho;
+}
+
+#modal-contato{
+	.enviar{
+		background-color: @azul-piscina;
+	}
+}
