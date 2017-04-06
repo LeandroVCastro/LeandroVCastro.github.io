@@ -1,3 +1,5 @@
+// out: ./style.css, sourcemap: false, compress: true
+
 @import "mixins.less";
 
 
@@ -274,5 +276,46 @@
 #modal-contato{
 	.enviar{
 		background-color: @azul-piscina;
+	}
+}
+
+
+section#saibaMais{
+	padding-top: 60px;
+	padding-bottom: 60px;
+	width: 100%;
+	background-color: @cinza-claro;
+	.shadow-bottom(#000);
+	h1.titulo{
+		text-align: center;
+		color: @azul;
+		text-shadow: 1px 2px #000;
+		text-transform: uppercase;
+		font-weight: 600;
+		margin-bottom: 0;
+		margin-bottom: 20px;
+	}
+	h4{
+		color: @azul;
+		text-shadow: 1px 2px #000;
+		text-transform: uppercase;
+		font-weight: 600;
+		margin-bottom: 0;
+		margin-bottom: 20px;
+	}
+	p{
+		span{
+			color: @azul;
+			font-weight: 600;
+		}
+		a{
+			color: @vermelho;
+			text-decoration: underline;
+			font-size: 16px;
+		}
+
+	}
+	ul{
+		margin-left: 15px;
 	}
 }
